@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class AddComplex_No
+{
+   private:
+       int re,im;
+   public:
+       void getData()
+       {
+           cout<<endl<<"Enter real part  :  ";
+           cin>>re;
+           cout<<endl<<"Enter Imaginary part  :  ";
+           cin>>im;
+       }
+       void Display()
+       {
+           cout<<re<<" + i"<<im;
+       }
+       void Add(AddComplex_No C1,AddComplex_No C2)
+       { 
+           re=C1.re+C2.re;
+           im=C1.im+C2.im;
+       }
+};
+int main()
+{ 
+   AddComplex_No C1,C2,C3;
+   cout<<endl<<"Enter First Complex No";
+   C1.getData();
+   cout<<endl<<"Complex No 1  :  ";
+   C1.Display();
+   cout<<endl<<endl<<"Enter Second Complex No";
+   C2.getData();
+   cout<<endl<<"Complex No 2  :  ";
+   C2.Display();
+   C3.Add(C1,C2);
+   cout<<endl<<endl<<"Sum of Complex Nos.  :  ";
+   C3.Display();
+   cout<<endl<<endl;
+}
+          
+          
